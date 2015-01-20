@@ -10,6 +10,7 @@ type
 {$SCOPEDENUMS OFF}
 
 type
+  // Initials of each month
   TMonth = (Jan, Feb, Mar, Apr, May, Jun,
             Jul, Aug, Sep, Oct, Nov, Dec);
 
