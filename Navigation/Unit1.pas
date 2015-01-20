@@ -81,6 +81,7 @@ begin
   {$IFDEF ANDROID}
   SpeedButton1.Visible := False;
   {$ENDIF}
+  // The file Logo.jpg has to be included into the repository
  // Image1.Bitmap.LoadFromFile(TPath.Combine(TPath.GetDocumentsPath, 'Logo.jpg'));
 
   ShowMessage(IntToStr(Unit2.manufactured));
