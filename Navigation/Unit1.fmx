@@ -1,0 +1,189 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object TabControl1: TTabControl
+    Touch.GestureManager = GestureManager1
+    Touch.InteractiveGestures = [Zoom, Pan]
+    OnGesture = TabControl1Gesture
+    Align = Client
+    FullSize = True
+    Height = 519.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
+    TabOrder = 0
+    TabPosition = None
+    Width = 384.000000000000000000
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 8.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'TabItem1'
+      Width = 8.000000000000000000
+      object Label1: TLabel
+        Align = Client
+        StyledSettings = [Family, Style, FontColor]
+        Height = 519.000000000000000000
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.HorzAlign = Center
+        TextSettings.WordWrap = False
+        Text = 'Label1'
+        Width = 384.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 8.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'TabItem2'
+      Width = 8.000000000000000000
+      object Label2: TLabel
+        Height = 23.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'Label2'
+        Width = 82.000000000000000000
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Align = Client
+        Height = 519.000000000000000000
+        TabOrder = 1
+        Width = 384.000000000000000000
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 8.000000000000000000
+      IsSelected = True
+      TabOrder = 0
+      Text = 'TabItem3'
+      Width = 8.000000000000000000
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 8.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'TabItem4'
+      Width = 8.000000000000000000
+      object Label4: TLabel
+        Height = 23.000000000000000000
+        Text = 'Label4'
+        Width = 82.000000000000000000
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 1
+    Width = 384.000000000000000000
+    object SpeedButton1: TSpeedButton
+      Action = PreviousTabAction1
+      Align = Left
+      Height = 48.000000000000000000
+      StyleLookup = 'priortoolbutton'
+      Width = 48.000000000000000000
+    end
+    object SpeedButton2: TSpeedButton
+      Action = NextTabAction1
+      Align = Right
+      Height = 48.000000000000000000
+      Position.X = 336.000000000000000000
+      StyleLookup = 'nexttoolbutton'
+      Width = 48.000000000000000000
+    end
+    object SpeedButton3: TSpeedButton
+      Action = Action1
+      Align = Center
+      Height = 48.000000000000000000
+      Width = 110.000000000000000000
+    end
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Height = 81.000000000000000000
+    Position.X = 136.000000000000000000
+    Position.Y = 256.000000000000000000
+    Width = 97.000000000000000000
+  end
+  object ActionList1: TActionList
+    Left = 48
+    Top = 416
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      CustomText = 'Next'
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      CustomText = 'Prev'
+      ShortCut = 137
+    end
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+      CustomText = 'Page 3'
+      Tab = TabItem3
+    end
+    object Action1: TAction
+      Category = 'Tab'
+      Text = 'Random Page'
+      OnExecute = Action1Execute
+    end
+    object ControlAction1: TControlAction
+      Category = 'Tab'
+      Text = 'ControlAction1'
+    end
+    object ValueRangeAction1: TValueRangeAction
+      Category = 'Tab'
+      Text = 'ValueRangeAction1'
+    end
+  end
+  object GestureManager1: TGestureManager
+    Left = 168
+    Top = 408
+    GestureData = <
+      item
+        Control = TabControl1
+        Collection = <
+          item
+            Action = NextTabAction1
+            GestureID = sgiLeft
+          end
+          item
+            Action = PreviousTabAction1
+            GestureID = sgiRight
+          end
+          item
+            Action = Action1
+            GestureID = sgiUp
+          end>
+      end>
+  end
+end
