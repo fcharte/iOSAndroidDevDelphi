@@ -1,4 +1,4 @@
-#*.res
+*.res
 #*.tlb
 #*.ddp
 #*.vlb
@@ -30,6 +30,8 @@
 # Delphi history and backups
 __history/
 *.~*
+Android/
+iOSSimulator/
 
 Thumbs.db
 ehthumbs.db
@@ -40,3 +42,5 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+*.o
+*.vsr
