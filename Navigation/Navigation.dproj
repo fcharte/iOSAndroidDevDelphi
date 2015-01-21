@@ -224,11 +224,6 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="Unit2.pas"/>
-        <DCCReference Include="Unit3.pas">
-            <Form>DataModule3</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
