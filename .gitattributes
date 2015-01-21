@@ -4,6 +4,7 @@
 # Módulos de proyecto y fuentes
 *.pas            text            -whitespace
 *.fmx            text            -whitespace
+*.dfm            text            -whitespace
 *.dpr            eol=crlf        -whitespace
 *.dproj          eol=crlf        -whitespace
 
