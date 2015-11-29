@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7D78768A-BB59-47DE-940F-3616D3250050}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="StylesProject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMXAnimacion\FMXAnimacion.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="StylesProject">
+        <MSBuild Projects="StylesProject.dproj"/>
+    </Target>
+    <Target Name="StylesProject:Clean">
+        <MSBuild Projects="StylesProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesProject:Make">
+        <MSBuild Projects="StylesProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXAnimacion">
+        <MSBuild Projects="FMXAnimacion\FMXAnimacion.dproj"/>
+    </Target>
+    <Target Name="FMXAnimacion:Clean">
+        <MSBuild Projects="FMXAnimacion\FMXAnimacion.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXAnimacion:Make">
+        <MSBuild Projects="FMXAnimacion\FMXAnimacion.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="StylesProject;FMXAnimacion"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="StylesProject:Clean;FMXAnimacion:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="StylesProject:Make;FMXAnimacion:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
