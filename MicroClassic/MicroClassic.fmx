@@ -1,0 +1,26 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object TabControl1: TTabControl
+    FullSize = True
+    Height = 200.000000000000000000
+    Position.X = 96.000000000000000000
+    Position.Y = 184.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabOrder = 1
+    Width = 200.000000000000000000
+  end
+end
