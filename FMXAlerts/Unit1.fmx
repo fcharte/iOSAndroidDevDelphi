@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 8.000000000000000000
+    Position.Y = 96.000000000000000000
+    Width = 180.000000000000000000
+    Height = 32.000000000000000000
+    object Label1: TLabel
+      Height = 23.000000000000000000
+      Position.Y = -24.000000000000000000
+      Text = 'Notification text'
+      Width = 185.000000000000000000
+    end
+    object Button1: TButton
+      Height = 44.000000000000000000
+      Position.X = 190.000000000000000000
+      TabOrder = 1
+      Text = 'Show notification'
+      Width = 171.000000000000000000
+      OnClick = Button1Click
+    end
+  end
+  object BannerAd1: TBannerAd
+    Align = Top
+    Width = 384.000000000000000000
+    Height = 57.000000000000000000
+    TestMode = True
+  end
+  object NotificationCenter1: TNotificationCenter
+    Left = 72
+    Top = 144
+  end
+end
