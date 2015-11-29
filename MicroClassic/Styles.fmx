@@ -1,0 +1,293 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Runtime style selection'
+  ClientHeight = 567
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 360
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 5'
+  DesignerOrientation = 2
+  DesignerOSVersion = ''
+  object Layout1: TLayout
+    Align = Top
+    Height = 73.000000000000000000
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Width = 360.000000000000000000
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Top
+      AutoSize = True
+      Height = 22.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      TextSettings.WordWrap = False
+      Text = 'Pick a style'
+      Width = 350.000000000000000000
+    end
+    object cbStyles: TComboBox
+      Align = Client
+      DisableFocusEffect = False
+      Height = 32.000000000000000000
+      ItemIndex = 0
+      Margins.Top = 5.000000000000000000
+      TabOrder = 1
+      Width = 350.000000000000000000
+      OnChange = cbStylesChange
+      object ListBoxItem1: TListBoxItem
+        Height = 44.000000000000000000
+        TabOrder = 0
+        Text = 'Default'
+        Width = 44.000000000000000000
+      end
+      object ListBoxItem2: TListBoxItem
+        Height = 44.000000000000000000
+        TabOrder = 1
+        Text = 'Diamond'
+        Width = 44.000000000000000000
+      end
+      object ListBoxItem3: TListBoxItem
+        Height = 44.000000000000000000
+        TabOrder = 2
+        Text = 'Jet'
+        Width = 44.000000000000000000
+      end
+      object ListBoxItem4: TListBoxItem
+        Height = 44.000000000000000000
+        TabOrder = 3
+        Text = 'Sterling'
+        Width = 44.000000000000000000
+      end
+    end
+  end
+  object Layout2: TLayout
+    Align = Client
+    Height = 494.000000000000000000
+    Width = 360.000000000000000000
+    TabOrder = 2
+    object GridPanelLayout1: TGridPanelLayout
+      Align = Client
+      Height = 484.000000000000000000
+      Padding.Left = 5.000000000000000000
+      Padding.Top = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Width = 350.000000000000000000
+      TabOrder = 0
+      ColumnCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = Button1
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = CheckBox1
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = RadioButton1
+          Row = 1
+        end
+        item
+          Column = 1
+          Control = Label2
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = ProgressBar1
+          Row = 2
+        end
+        item
+          Column = 1
+          Control = ScrollBar1
+          Row = 2
+        end
+        item
+          Column = 0
+          Control = Expander1
+          Row = 3
+        end
+        item
+          Column = 1
+          Control = TrackBar1
+          Row = 3
+        end
+        item
+          Column = 0
+          Control = Switch1
+          Row = 4
+        end
+        item
+          Column = 1
+          Control = ListBox1
+          Row = 4
+        end
+        item
+          Column = 0
+          Control = Edit1
+          Row = 5
+        end
+        item
+          Column = 1
+          Control = ArcDial1
+          Row = 5
+        end>
+      RowCollection = <
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end
+        item
+          SizeStyle = Absolute
+          Value = 84.000000000000000000
+        end>
+      object Button1: TButton
+        Anchors = []
+        Height = 44.000000000000000000
+        Position.X = 51.000000000000000000
+        Position.Y = 20.000000000000000000
+        TabOrder = 2
+        Text = 'Button1'
+        Width = 73.000000000000000000
+      end
+      object CheckBox1: TCheckBox
+        Anchors = []
+        Height = 23.000000000000000000
+        Position.X = 202.500000000000000000
+        Position.Y = 30.500000000000000000
+        TabOrder = 3
+        Text = 'CheckBox1'
+        Width = 120.000000000000000000
+      end
+      object RadioButton1: TRadioButton
+        Anchors = []
+        Height = 23.000000000000000000
+        Position.X = 27.500000000000000000
+        Position.Y = 114.500000000000000000
+        TabOrder = 4
+        Text = 'RadioButton1'
+        Width = 120.000000000000000000
+      end
+      object Label2: TLabel
+        Anchors = []
+        Height = 23.000000000000000000
+        Position.X = 221.500000000000000000
+        Position.Y = 114.500000000000000000
+        Text = 'Label2'
+        Width = 82.000000000000000000
+      end
+      object ProgressBar1: TProgressBar
+        Anchors = []
+        Height = 10.000000000000000000
+        Orientation = Horizontal
+        Position.X = 37.500000000000000000
+        Position.Y = 205.000000000000000000
+        Value = 30.000000000000000000
+        Width = 100.000000000000000000
+      end
+      object ScrollBar1: TScrollBar
+        Anchors = []
+        Height = 7.000000000000000000
+        SmallChange = 0.000000000000000000
+        Orientation = Horizontal
+        Position.X = 212.500000000000000000
+        Position.Y = 206.500000000000000000
+        Width = 100.000000000000000000
+      end
+      object Expander1: TExpander
+        Anchors = []
+        Height = 74.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 257.000000000000000000
+        ShowCheck = False
+        Text = 'Expander1'
+        Width = 165.000000000000000000
+        TabOrder = 8
+        ContentSize = '49'
+      end
+      object TrackBar1: TTrackBar
+        Anchors = []
+        Height = 32.000000000000000000
+        Orientation = Horizontal
+        Position.X = 212.500000000000000000
+        Position.Y = 278.000000000000000000
+        TabOrder = 9
+        Width = 100.000000000000000000
+      end
+      object Switch1: TSwitch
+        Anchors = []
+        Height = 26.000000000000000000
+        IsChecked = False
+        Position.X = 49.500000000000000000
+        Position.Y = 365.000000000000000000
+        TabOrder = 10
+        Width = 76.000000000000000000
+      end
+      object ListBox1: TListBox
+        Anchors = []
+        Height = 74.000000000000000000
+        Position.X = 180.000000000000000000
+        Position.Y = 341.000000000000000000
+        TabOrder = 11
+        Width = 165.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = []
+        TabOrder = 12
+        Position.X = 39.000000000000000000
+        Position.Y = 446.000000000000000000
+        Width = 97.000000000000000000
+        Height = 32.000000000000000000
+      end
+      object ArcDial1: TArcDial
+        Anchors = []
+        Height = 30.000000000000000000
+        Position.X = 247.500000000000000000
+        Position.Y = 447.000000000000000000
+        TabOrder = 13
+        Width = 30.000000000000000000
+      end
+    end
+  end
+end
