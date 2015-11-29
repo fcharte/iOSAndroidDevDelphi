@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Height = 517.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
+    TabOrder = 1
+    Width = 384.000000000000000000
+    OnChange = TabControl1Change
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'Location info'
+      Width = 128.000000000000000000
+      object ListBox1: TListBox
+        Align = Client
+        Height = 468.000000000000000000
+        TabOrder = 0
+        Width = 384.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemrightdetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        object ListBoxItem1: TListBoxItem
+          AutoTranslate = False
+          Height = 44.000000000000000000
+          StyleLookup = 'listboxitemrightdetail'
+          TabOrder = 0
+          Text = 'Latitude'
+          Width = 384.000000000000000000
+        end
+        object ListBoxItem2: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 44.000000000000000000
+          StyleLookup = 'listboxitemrightdetail'
+          TabOrder = 1
+          Text = 'Longitude'
+          Width = 384.000000000000000000
+        end
+        object ListBoxItem3: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 88.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          TabOrder = 2
+          Text = 'Altitude'
+          Width = 384.000000000000000000
+        end
+        object ListBoxItem4: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 132.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          TabOrder = 3
+          Text = 'Heading'
+          Width = 384.000000000000000000
+        end
+        object ListBoxItem5: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 176.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          TabOrder = 4
+          Text = 'Speed'
+          Width = 384.000000000000000000
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'Map'
+      Width = 128.000000000000000000
+      object WebBrowser1: TWebBrowser
+        Align = Client
+        Height = 468.000000000000000000
+        Width = 384.000000000000000000
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = True
+      TabOrder = 0
+      Text = 'Other info'
+      Width = 128.000000000000000000
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Align = Client
+        Height = 468.000000000000000000
+        TabOrder = 0
+        Width = 384.000000000000000000
+      end
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Height = 50.000000000000000000
+    Width = 384.000000000000000000
+    TabOrder = 2
+    object Switch1: TSwitch
+      Height = 26.000000000000000000
+      IsChecked = True
+      Position.X = 152.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 0
+      Width = 76.000000000000000000
+      OnSwitch = Switch1Switch
+    end
+  end
+  object AniIndicator1: TAniIndicator
+    Height = 50.000000000000000000
+    Position.X = 168.000000000000000000
+    Position.Y = 256.000000000000000000
+    Width = 50.000000000000000000
+  end
+  object LocationSensor1: TLocationSensor
+    Active = True
+    Accuracy = 10.000000000000000000
+    Distance = 10.000000000000000000
+    OnLocationChanged = LocationSensor1LocationChanged
+    Left = 56
+    Top = 8
+  end
+end
