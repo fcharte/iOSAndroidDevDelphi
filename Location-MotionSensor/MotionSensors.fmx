@@ -1,0 +1,170 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Height = 567.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    Width = 384.000000000000000000
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'Motion'
+      Width = 192.000000000000000000
+      object Layout1: TLayout
+        Align = Top
+        Height = 50.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 0
+        object ComboBox1: TComboBox
+          Align = Client
+          DisableFocusEffect = False
+          Height = 40.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          TabOrder = 0
+          Width = 293.000000000000000000
+          OnChange = ComboBox1Change
+        end
+        object Switch1: TSwitch
+          Align = Right
+          Height = 50.000000000000000000
+          IsChecked = True
+          Margins.Right = 5.000000000000000000
+          Position.X = 303.000000000000000000
+          TabOrder = 1
+          Width = 76.000000000000000000
+          OnSwitch = Switch1Switch
+        end
+      end
+      object ListBox1: TListBox
+        Align = Client
+        Height = 468.000000000000000000
+        TabOrder = 1
+        Width = 384.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = True
+      TabOrder = 0
+      Text = 'Orientation'
+      Width = 192.000000000000000000
+      object Layout2: TLayout
+        Align = Top
+        Height = 50.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 0
+        object ComboBox2: TComboBox
+          Align = Client
+          DisableFocusEffect = False
+          Height = 32.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          TabOrder = 0
+          Width = 293.000000000000000000
+          OnChange = ComboBox2Change
+        end
+        object Switch2: TSwitch
+          Align = Right
+          Height = 26.000000000000000000
+          IsChecked = True
+          Margins.Right = 5.000000000000000000
+          Position.X = 303.000000000000000000
+          Position.Y = 12.000000000000000000
+          TabOrder = 1
+          Width = 76.000000000000000000
+          OnSwitch = Switch2Switch
+        end
+      end
+      object ListBox2: TListBox
+        Align = Client
+        Height = 286.000000000000000000
+        TabOrder = 1
+        Width = 384.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+      end
+      object Layout3: TLayout
+        Align = Bottom
+        Height = 182.000000000000000000
+        Position.Y = 336.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 2
+        object Circle1: TCircle
+          Align = Center
+          Height = 150.000000000000000000
+          Width = 150.000000000000000000
+          object Line1: TLine
+            Height = 75.000000000000000000
+            LineType = Diagonal
+            Position.X = 75.000000000000000000
+            RotationCenter.X = 1.000000000000000000
+            RotationCenter.Y = 1.000000000000000000
+            Width = 1.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 250
+    OnTimer = Timer1Timer
+    Left = 144
+    Top = 336
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 250
+    OnTimer = Timer2Timer
+    Left = 248
+    Top = 336
+  end
+  object MotionSensor1: TMotionSensor
+    OnSensorChoosing = MotionSensor1SensorChoosing
+    Left = 248
+    Top = 272
+  end
+  object OrientationSensor1: TOrientationSensor
+    OnSensorChoosing = OrientationSensor1SensorChoosing
+    Left = 144
+    Top = 272
+  end
+  object MotionSensor2: TMotionSensor
+    OnSensorChoosing = MotionSensor2SensorChoosing
+    Left = 248
+    Top = 272
+  end
+end
