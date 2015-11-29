@@ -1,0 +1,90 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 434
+  ClientWidth = 505
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnShow = FormShow
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object lblID: TLabel
+    Height = 17.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = '...'
+    Width = 457.000000000000000000
+  end
+  object mmLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Bottom
+    Height = 242.000000000000000000
+    Position.Y = 192.000000000000000000
+    TabOrder = 6
+    Width = 505.000000000000000000
+  end
+  object edtSended: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Position.X = 16.000000000000000000
+    Position.Y = 104.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object edtTime: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Position.X = 16.000000000000000000
+    Position.Y = 136.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object Button1: TButton
+    Height = 22.000000000000000000
+    Position.X = 128.000000000000000000
+    Position.Y = 136.000000000000000000
+    TabOrder = 9
+    Text = 'Suscripci'#243'n'
+    Width = 129.000000000000000000
+    OnClick = Button1Click
+  end
+  object ttaProfile: TTetheringAppProfile
+    Manager = ttManager
+    Text = 'Profile FMX'
+    Group = 'Neftal'#237
+    Actions = <
+      item
+        Name = 'ActionCerrar'
+        IsPublic = True
+        Action = ActionCerrar
+        NotifyUpdates = False
+      end>
+    Resources = <>
+    OnAcceptResource = ttaProfileAcceptResource
+    OnResourceReceived = ttaProfileResourceReceived
+    OnResourceUpdated = ttaProfileResourceUpdated
+    Left = 312
+    Top = 40
+  end
+  object ttManager: TTetheringManager
+    OnPairedFromLocal = ttManagerPairedFromLocal
+    OnPairedToRemote = ttManagerPairedToRemote
+    Text = 'Manager FMX'
+    Left = 224
+    Top = 48
+  end
+  object ActionList1: TActionList
+    Left = 424
+    Top = 81
+    object ActionCerrar: TAction
+      Text = 'ActionCerrar'
+      OnExecute = ActionCerrarExecute
+    end
+  end
+end

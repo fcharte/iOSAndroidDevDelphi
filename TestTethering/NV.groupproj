@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{36B5046C-8924-4B64-9F8E-EB40B92AD3A9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TestVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TestFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MobileApp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TestVCL">
+        <MSBuild Projects="TestVCL.dproj"/>
+    </Target>
+    <Target Name="TestVCL:Clean">
+        <MSBuild Projects="TestVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestVCL:Make">
+        <MSBuild Projects="TestVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestFMX">
+        <MSBuild Projects="TestFMX.dproj"/>
+    </Target>
+    <Target Name="TestFMX:Clean">
+        <MSBuild Projects="TestFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestFMX:Make">
+        <MSBuild Projects="TestFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MobileApp">
+        <MSBuild Projects="MobileApp.dproj"/>
+    </Target>
+    <Target Name="MobileApp:Clean">
+        <MSBuild Projects="MobileApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobileApp:Make">
+        <MSBuild Projects="MobileApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TestVCL;TestFMX;MobileApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TestVCL:Clean;TestFMX:Clean;MobileApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TestVCL:Make;TestFMX:Make;MobileApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

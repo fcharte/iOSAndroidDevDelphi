@@ -1,0 +1,139 @@
+object TabbedForm: TTabbedForm
+  Left = 0
+  Top = 0
+  Caption = 'TabbedForm'
+  ClientHeight = 508
+  ClientWidth = 320
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 533
+  DesignerDeviceName = 'Samsung Galaxy S2'
+  DesignerOrientation = 2
+  DesignerOSVersion = ''
+  object HeaderToolBar: TToolBar
+    Anchors = []
+    Height = 48.000000000000000000
+    TabOrder = 0
+    Width = 320.000000000000000000
+    object ToolBarLabel: TLabel
+      Align = Contents
+      Height = 48.000000000000000000
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Aplicaci'#243'n Movil'
+      Width = 320.000000000000000000
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Height = 460.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = Bottom
+    Width = 320.000000000000000000
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = True
+      StyleLookup = 'tabitemtoprated'
+      TabOrder = 0
+      Text = 'Tethering'
+      Width = 160.000000000000000000
+      object mmLog: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Align = Bottom
+        Height = 219.000000000000000000
+        Position.Y = 192.000000000000000000
+        TabOrder = 0
+        Width = 320.000000000000000000
+      end
+      object Button1: TButton
+        Height = 44.000000000000000000
+        Position.X = 240.000000000000000000
+        TabOrder = 1
+        Text = 'Susc.'
+        Width = 73.000000000000000000
+        OnClick = Button1Click
+      end
+      object Label1: TLabel
+        Height = 23.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 112.000000000000000000
+        Text = 'Recurso: '
+        Width = 82.000000000000000000
+      end
+      object edtRes: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 92.000000000000000000
+        Position.Y = 109.000000000000000000
+        Width = 197.000000000000000000
+        Height = 32.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = '...'
+      Width = 160.000000000000000000
+    end
+  end
+  object lblID: TLabel
+    AutoSize = True
+    StyledSettings = [Family, Style, FontColor]
+    Height = 13.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    TextSettings.Font.Size = 10.000000000000000000
+    TextSettings.WordWrap = False
+    Text = '...'
+    Width = 9.000000000000000000
+  end
+  object GestureManager1: TGestureManager
+    Left = 352
+    Top = 56
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+  object ttaProfile: TTetheringAppProfile
+    Manager = ttManager
+    Text = 'Profile Mobile'
+    Group = 'Neftal'#237
+    Actions = <>
+    Resources = <>
+    OnResourceUpdated = ttaProfileResourceUpdated
+    Left = 104
+    Top = 80
+  end
+  object ttManager: TTetheringManager
+    OnPairedFromLocal = ttManagerPairedFromLocal
+    OnPairedToRemote = ttManagerPairedToRemote
+    OnUnPairManager = ttManagerUnPairManager
+    Text = 'Manager Movil'
+    Left = 168
+    Top = 72
+  end
+end
