@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2CB0F91A-2607-4ABA-BA9E-92210B83EBD8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MobileProject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DesktopProject.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MobileProject">
+        <MSBuild Projects="MobileProject.dproj"/>
+    </Target>
+    <Target Name="MobileProject:Clean">
+        <MSBuild Projects="MobileProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobileProject:Make">
+        <MSBuild Projects="MobileProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DesktopProject">
+        <MSBuild Projects="DesktopProject.dproj"/>
+    </Target>
+    <Target Name="DesktopProject:Clean">
+        <MSBuild Projects="DesktopProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DesktopProject:Make">
+        <MSBuild Projects="DesktopProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MobileProject;DesktopProject"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MobileProject:Clean;DesktopProject:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MobileProject:Make;DesktopProject:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

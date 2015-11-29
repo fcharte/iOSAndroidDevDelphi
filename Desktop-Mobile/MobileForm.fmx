@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    Align = Bottom
+    Height = 23.000000000000000000
+    Position.Y = 500.000000000000000000
+    Text = 'Label1'
+    Width = 384.000000000000000000
+    OnClick = Label1Click
+  end
+  object Layout1: TLayout
+    Align = Top
+    Height = 145.000000000000000000
+    Width = 384.000000000000000000
+    TabOrder = 6
+    object Layout2: TLayout
+      Align = Top
+      Height = 50.000000000000000000
+      Padding.Left = 5.000000000000000000
+      Padding.Top = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Width = 384.000000000000000000
+      TabOrder = 4
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 0
+        Width = 221.000000000000000000
+        Height = 32.000000000000000000
+        Margins.Left = 5.000000000000000000
+        OnChange = Edit1Change
+      end
+      object Label2: TLabel
+        Align = Left
+        Height = 40.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Text = 'Enter your name'
+        Width = 148.000000000000000000
+      end
+    end
+    object Layout3: TLayout
+      Align = Client
+      Height = 95.000000000000000000
+      Width = 384.000000000000000000
+      TabOrder = 5
+      object Button1: TButton
+        Align = Right
+        Height = 43.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 176.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 5
+        Text = 'Refresh'
+        Width = 91.000000000000000000
+        OnClick = Button1Click
+      end
+      object ComboBox1: TComboBox
+        Align = Bottom
+        DisableFocusEffect = False
+        Height = 32.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 58.000000000000000000
+        TabOrder = 4
+        Width = 374.000000000000000000
+        OnChange = ComboBox1Change
+      end
+      object Label3: TLabel
+        Height = 23.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'Select a type of food'
+        Width = 209.000000000000000000
+      end
+      object Button2: TButton
+        Align = Right
+        Height = 53.000000000000000000
+        Position.X = 272.000000000000000000
+        TabOrder = 6
+        Text = 'Suscribe'
+        Width = 112.000000000000000000
+        OnClick = Button2Click
+      end
+    end
+  end
+  object ListBox1: TListBox
+    Align = Client
+    Height = 355.000000000000000000
+    TabOrder = 7
+    Width = 384.000000000000000000
+    OnClick = ListBox1Click
+    DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+  end
+  object Button3: TButton
+    Align = MostBottom
+    Height = 44.000000000000000000
+    Position.Y = 523.000000000000000000
+    TabOrder = 15
+    Text = 'SendID'
+    Width = 384.000000000000000000
+    OnClick = Button3Click
+  end
+  object TetheringManager1: TTetheringManager
+    OnEndManagersDiscovery = TetheringManager1EndManagersDiscovery
+    OnPairedToRemote = TetheringManager1PairedToRemote
+    Text = 'TetheringManager1'
+    Left = 240
+    Top = 264
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Manager = TetheringManager1
+    Text = 'TetheringAppProfile1'
+    Group = 'CookService'
+    Actions = <
+      item
+        Name = 'SendID'
+        IsPublic = True
+        Kind = Mirror
+        Action = SendID
+        NotifyUpdates = False
+      end>
+    Resources = <>
+    OnAcceptResource = TetheringAppProfile1AcceptResource
+    OnActionUpdated = TetheringAppProfile1ActionUpdated
+    OnResourceReceived = TetheringAppProfile1ResourceReceived
+    OnResourceUpdated = TetheringAppProfile1ResourceUpdated
+    OnRemoteProfileUpdate = TetheringAppProfile1RemoteProfileUpdate
+    Left = 112
+    Top = 264
+  end
+  object ActionList1: TActionList
+    Left = 176
+    Top = 272
+    object SendID: TAction
+      Text = 'SendID'
+    end
+  end
+end
