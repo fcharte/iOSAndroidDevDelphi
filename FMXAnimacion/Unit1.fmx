@@ -1,0 +1,144 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Animaciones'
+  ClientHeight = 296
+  ClientWidth = 486
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object TrackBar1: TTrackBar
+    Align = Bottom
+    Height = 19.000000000000000000
+    Max = 250.000000000000000000
+    Min = 25.000000000000000000
+    Orientation = Horizontal
+    Position.Y = 277.000000000000000000
+    TabOrder = 1
+    Value = 100.000000000000000000
+    Width = 486.000000000000000000
+    OnChange = TrackBar1Change
+  end
+  object Escena: TLayout
+    Align = Client
+    Height = 277.000000000000000000
+    Width = 467.000000000000000000
+    object Button1: TButton
+      StaysPressed = True
+      Height = 22.000000000000000000
+      Position.X = 345.000000000000000000
+      Position.Y = 236.000000000000000000
+      TabOrder = 0
+      Text = 'Bot'#243'n animado'
+      Width = 105.000000000000000000
+      object FloatAnimation4: TFloatAnimation
+        AutoReverse = True
+        Duration = 1.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle'
+        StartValue = -5.000000000000000000
+        StopValue = 5.000000000000000000
+        Trigger = 'IsMouseOver=true'
+      end
+      object FloatAnimation5: TFloatAnimation
+        Duration = 0.100000001490116100
+        PropertyName = 'RotationAngle'
+        StartValue = 5.000000000000000000
+        StartFromCurrent = True
+        StopValue = 0.000000000000000000
+        Trigger = 'IsMouseOver=false'
+      end
+      object BevelEffect1: TBevelEffect
+        Direction = 30.000000000000000000
+        Size = 100
+      end
+    end
+    object Esfera: TCircle
+      Fill.Kind = None
+      Height = 200.000000000000000000
+      Position.X = 60.000000000000000000
+      Position.Y = 20.000000000000000000
+      Width = 200.000000000000000000
+      object FloatAnimation3: TFloatAnimation
+        Duration = 0.000009999999747379
+        PropertyName = 'StrokeThickness'
+        StartValue = 1.000000000000000000
+        StopValue = 10.000000000000000000
+        Trigger = 'IsMouseOver=true'
+      end
+    end
+    object Segundero: TLine
+      Height = 100.000000000000000000
+      LineType = Diagonal
+      Position.X = 160.000000000000000000
+      Position.Y = 30.000000000000000000
+      RotationCenter.X = 1.000000000000000000
+      RotationCenter.Y = 1.000000000000000000
+      Stroke.Thickness = 2.000000000000000000
+      Width = 4.000000000000000000
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 60.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle'
+        StartValue = 0.000000000000000000
+        StopValue = 359.000000000000000000
+      end
+    end
+    object Minutero: TLine
+      Height = 75.000000000000000000
+      LineType = Diagonal
+      Position.X = 160.000000000000000000
+      Position.Y = 55.000000000000000000
+      RotationCenter.X = 1.000000000000000000
+      RotationCenter.Y = 1.000000000000000000
+      Stroke.Color = claBlue
+      Stroke.Thickness = 4.000000000000000000
+      Width = 4.000000000000000000
+      object FloatAnimation2: TFloatAnimation
+        Enabled = True
+        Duration = 3600.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle'
+        StartValue = 0.000000000000000000
+        StopValue = 359.000000000000000000
+      end
+    end
+    object PixelateEffect1: TPixelateEffect
+      BlockCount = 1000.000000000000000000
+      object FloatAnimation6: TFloatAnimation
+        Enabled = True
+        Duration = 5.000000000000000000
+        Interpolation = Exponential
+        PropertyName = 'BlockCount'
+        StartValue = 10.000000000000000000
+        StopValue = 1000.000000000000000000
+      end
+    end
+  end
+  object TrackBar2: TTrackBar
+    Align = Right
+    Height = 277.000000000000000000
+    Max = 250.000000000000000000
+    Min = 25.000000000000000000
+    Orientation = Vertical
+    Position.X = 467.000000000000000000
+    TabOrder = 3
+    Value = 100.000000000000000000
+    Width = 19.000000000000000000
+    OnChange = TrackBar1Change
+  end
+  object Switch1: TSwitch
+    Height = 24.000000000000000000
+    IsChecked = False
+    TabOrder = 4
+    Width = 64.000000000000000000
+    OnClick = Switch1Click
+  end
+end
