@@ -1,0 +1,72 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 1
+    Width = 384.000000000000000000
+    object FlowLayout1: TFlowLayout
+      Align = Client
+      Height = 48.000000000000000000
+      Width = 384.000000000000000000
+      TabOrder = 1
+      Justify = Left
+      JustifyLastLine = Left
+      FlowDirection = LeftToRight
+      object SpeedButton1: TSpeedButton
+        Action = TakePhotoFromCameraAction1
+        Height = 48.000000000000000000
+        StyleLookup = 'cameratoolbutton'
+        Width = 48.000000000000000000
+      end
+      object SpeedButton2: TSpeedButton
+        Action = TakePhotoFromLibraryAction1
+        Height = 48.000000000000000000
+        Position.X = 48.000000000000000000
+        StyleLookup = 'organizetoolbutton'
+        Width = 48.000000000000000000
+      end
+      object SpeedButton3: TSpeedButton
+        Action = ShowShareSheetAction1
+        Height = 48.000000000000000000
+        Position.X = 96.000000000000000000
+        StyleLookup = 'actiontoolbutton'
+        Width = 48.000000000000000000
+      end
+    end
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Height = 519.000000000000000000
+    Width = 384.000000000000000000
+  end
+  object ActionList1: TActionList
+    Left = 232
+    Top = 136
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      OnDidCancelTaking = TakePhotoFromCameraAction1DidCancelTaking
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
+      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
+    end
+    object ShowShareSheetAction1: TShowShareSheetAction
+      OnBeforeExecute = ShowShareSheetAction1BeforeExecute
+    end
+  end
+end
