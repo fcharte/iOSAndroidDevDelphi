@@ -1,0 +1,288 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 2
+  DesignerOSVersion = ''
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Client
+    Height = 470.000000000000000000
+    Width = 384.000000000000000000
+    TabOrder = 3
+    ColumnCollection = <
+      item
+        Value = 50.769230769230770000
+      end
+      item
+        Value = 49.230769230769230000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = Image1
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = Image2
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Height = 470.000000000000000000
+      Width = 194.953842163085900000
+      WrapMode = Stretch
+      OnClick = Image1Click
+      object PaperSketchEffect1: TPaperSketchEffect
+        brushSize = 3.000000000000000000
+      end
+    end
+    object Image2: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Height = 470.000000000000000000
+      Width = 189.046157836914100000
+      WrapMode = Stretch
+      OnClick = Image2Click
+      object PaperSketchEffect2: TPaperSketchEffect
+        brushSize = 3.000000000000000000
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Top
+    FullSize = True
+    Height = 97.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
+    TabOrder = 4
+    Width = 384.000000000000000000
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'Focus mode'
+      Width = 128.000000000000000000
+      object FlowLayout1: TFlowLayout
+        Align = Client
+        Height = 48.000000000000000000
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 0
+        Justify = Left
+        JustifyLastLine = Left
+        FlowDirection = LeftToRight
+        object RadioButton1: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          GroupName = 'FocusGroup'
+          Height = 23.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 10.000000000000000000
+          TabOrder = 2
+          Text = 'Locked'
+          TextSettings.Font.Size = 10.000000000000000000
+          Width = 79.000000000000000000
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          GroupName = 'FocusGroup'
+          Height = 23.000000000000000000
+          IsChecked = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 99.000000000000000000
+          Position.Y = 10.000000000000000000
+          TabOrder = 1
+          Text = 'Autofocus'
+          TextSettings.Font.Size = 10.000000000000000000
+          Width = 86.000000000000000000
+          OnChange = RadioButton1Change
+        end
+        object RadioButton3: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          GroupName = 'FocusGroup'
+          Height = 23.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 195.000000000000000000
+          Position.Y = 10.000000000000000000
+          TabOrder = 0
+          Text = 'Continuous'
+          TextSettings.Font.Size = 10.000000000000000000
+          Width = 94.000000000000000000
+          OnChange = RadioButton1Change
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = 'Flash mode'
+      Width = 128.000000000000000000
+      object FlowLayout2: TFlowLayout
+        Align = Client
+        Height = 48.000000000000000000
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 0
+        Justify = Left
+        JustifyLastLine = Left
+        FlowDirection = LeftToRight
+        object Label1: TLabel
+          Height = 22.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 10.000000000000000000
+          TextSettings.WordWrap = False
+          Text = 'Flash'
+          Width = 63.000000000000000000
+        end
+        object Switch1: TSwitch
+          Height = 26.000000000000000000
+          IsChecked = False
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 83.000000000000000000
+          Position.Y = 10.000000000000000000
+          TabOrder = 1
+          Width = 76.000000000000000000
+          OnSwitch = RadioButton1Change
+        end
+        object Label2: TLabel
+          Height = 22.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 169.000000000000000000
+          Position.Y = 10.000000000000000000
+          TextSettings.WordWrap = False
+          Text = 'Torch'
+          Width = 56.000000000000000000
+        end
+        object Switch2: TSwitch
+          Height = 26.000000000000000000
+          IsChecked = False
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 235.000000000000000000
+          Position.Y = 10.000000000000000000
+          TabOrder = 3
+          Width = 76.000000000000000000
+          OnSwitch = RadioButton1Change
+        end
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Height = 49.000000000000000000
+      IsSelected = True
+      TabOrder = 0
+      Text = 'Effects'
+      Width = 128.000000000000000000
+      object GridPanelLayout2: TGridPanelLayout
+        Align = Client
+        Height = 48.000000000000000000
+        Width = 384.000000000000000000
+        TabOrder = 0
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = TrackBar1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = TrackBar2
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        object TrackBar1: TTrackBar
+          Align = Client
+          Height = 32.000000000000000000
+          Max = 10.000000000000000000
+          Orientation = Horizontal
+          TabOrder = 1
+          Value = 0.600000023841857900
+          Width = 192.000000000000000000
+          OnChange = TrackBar2Change
+        end
+        object TrackBar2: TTrackBar
+          Align = Client
+          Height = 32.000000000000000000
+          Max = 10.000000000000000000
+          Orientation = Horizontal
+          TabOrder = 0
+          Value = 0.600000023841857900
+          Width = 192.000000000000000000
+          OnChange = TrackBar2Change
+        end
+      end
+    end
+  end
+  object CameraComponent1: TCameraComponent
+    Kind = BackCamera
+    OnSampleBufferReady = CameraComponent1SampleBufferReady
+    Left = 80
+    Top = 200
+  end
+end
